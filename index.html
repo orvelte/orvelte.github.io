@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olivia Velte</title>
+<meta name="description" content="Olivia Velte — AI safety research.">
+
+<style>
+  body {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    background: #FDF9EF;
+    color: #000;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 1.875rem;
+    font-weight: normal;
+    margin: 0 0 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin: 2.25rem 0 0.75rem;
+  }
+
+  p { margin: 0 0 1rem; }
+
+  a { color: #000; }
+  a:hover { text-decoration: none; }
+
+  .links { margin-bottom: 1.75rem; }
+  .links a { margin-right: 0.5rem; }
+
+  .photo {
+    float: right;
+    width: 9rem;
+    height: auto;
+    margin: 0 0 1rem 1.5rem;
+  }
+
+  ul {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+  }
+
+  li { margin-bottom: 0.75rem; }
+
+  .caveat {
+    font-style: italic;
+    margin: 0 0 1rem;
+  }
+
+  /* book recommendation box */
+
+  .dropbox {
+    clear: both;
+    margin-top: 3rem;
+    border: 1px solid #000;
+    padding: 1.25rem;
+  }
+
+  .dropbox h2 { margin-top: 0; }
+
+  textarea {
+    display: block;
+    width: 100%;
+    min-height: 5.5rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    background: #FFFDF8;
+    border: 1px solid #000;
+    padding: 0.6rem;
+    resize: vertical;
+  }
+
+  button {
+    margin-top: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #000;
+    background: #FDF9EF;
+    border: 1px solid #000;
+    padding: 0.4rem 1.25rem;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.5; cursor: default; }
+
+  .status { margin: 0.75rem 0 0; min-height: 1.2em; }
+
+  /* hidden honeypot field for spam bots */
+  .hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 32rem) {
+    body { padding: 2rem 1.25rem 4rem; }
+    .photo { width: 7rem; margin-left: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Olivia Velte</h1>
+
+<p class="links">
+  <a href="mailto:olivia@velte.com">email</a> ·
+  <a href="https://github.com/orvelte">github</a> ·
+  <a href="https://www.linkedin.com/in/olivia-velte">linkedin</a>
+</p>
+
+<img class="photo" src="photo.jpg" alt="Ollie, a grey tabby cat">
+
+<p>Hello! I'm currently working on a project through Bluedot's Technical AI Safety Sprint. In my free time I enjoy reading, writing, and petting my cat Ollie.</p>
+
+<h2>Experience</h2>
+
+<ul>
+  <li>BlueDot courses: AGI Strategy, Technical AI Safety, Technical AI Safety Project Sprint (running July 16 - August 13)</li>
+  <li>M.Sc. AI for the Biosciences, <em>Distinction,</em> Queen Mary University of London (2025)</li>
+  <li>B.A. Neuroscience, Boston University (2024)</li>
+  <li>Worked in Neuroscience research for ~3 years @ Boston University School of Medicine (specialized in cognition of decision-making and mPFC reward circuitry)</li>
+</ul>
+
+<h2>Independent AI Safety Research</h2>
+
+<p class="caveat">*Most of these are neuro-inspired, just a fun way to be creative as I learn safety research techniques, I'd like to be involved in higher-leverage projects in the future</p>
+
+<ul>
+  <li><a href="https://github.com/orvelte/cot-under-incentive-framing/blob/main/CoT%20Faithfulness%20Degrades%20Where%20Human%20Deliberation%20Would%20Too.pdf">CoT Faithfulness Degrades Where Human Deliberation Would Too</a>: Motivated by the finding that prefrontal deliberation is most vulnerable to motivated inference under ambiguity (where slower goal-directed reasoning competes with a faster incentive-driven response), tested whether chain-of-thought degrades the same way under incentive pressure. Using a step-perturbation paradigm across 30 closed-form and 20 defeasible reasoning problems, found a clean double dissociation (gap +0.103): reward-salient framing left CoT faithfulness intact on closed-form problems but selectively degraded CoT–answer consistency on defeasible ones, with the largest drops in risk assessment and probabilistic forecasting.</li>
+
+  <li><a href="https://github.com/orvelte/sycophancy-as-variable-reward-signal/blob/main/sycophancy_variable_reward_signal.pdf">Sycophancy as a Variable Reward Signal:</a> Building on the neuroscience that the unpredictability of reward drives the strongest conditioning, designed a Response Variability Index (RVI) Shannon-entropy measure of how predictably frontier models agree with users across semantically equivalent prompt clusters. Found 30.4% of Mistral's clusters fall in the variable-ratio regime (the schedule structure most associated with habit formation and resistance to extinction) versus 14.3% for Claude, framing sycophancy as a training-shaped propensity.</li>
+
+  <li><a href="https://github.com/orvelte/when-independence-breaks">Neural population stress-test of ARC's presumption of independence</a>: Stress-tested a key Alignment Research Center AI-safety estimation assumption and found independence failures scale with circuit size and peak at decision boundaries, grounding the problem in 25 years of cortical neuroscience data.</li>
+
+  <li><a href="https://github.com/orvelte/AI-dependency-prediction">Predicting AI Dependency</a>: Tested whether the goal-directed→habitual transition (striatal dopamine shifting control from deliberate, outcome-sensitive engagement to cue-driven responding) leaves a linguistic fingerprint detectable before dependency behavior consolidates. Extracted lexical, pragmatic, and session-level features from +12k WildChat-1M users; high-dependency users were distinguishable from their earliest sessions via colloquial register, faster return intervals, and resistance to refusals (AUC 0.712).</li>
+</ul>
+
+<h2>Non AI safety Research:</h2>
+
+<ul>
+  <li>MSc Thesis: <em>An NLP-Based Framework for Hypothesis Generation and Validation of Neural Circuit–Cancer Relationships</em>. Olivia Velte, Dr. Mohamed Elbadawi</li>
+
+  <li><em>Alpha-2 adrenergic agonists reduce heavy alcohol drinking and improve cognitive performance in mice.</em> Quadir, S.G., Lepeak, L., Miracle, S., Collu, R., Velte, O., He, Y., Ozturk, Z., Rohl, C. D., Sabino, V., &amp; Cottone, P. (2026). eNeuro, <a href="https://doi.org/10.1523/ENEURO.0368-25.2026">https://doi.org/10.1523/ENEURO.0368-25.2026</a></li>
+
+  <li>The Alpha2 Adrenergic Agonist Guanfacine Attenuates Chronic Alcohol-Induced Temporal Order Memory Deficits in Mice. O. Velte, P. Cottone, V. Sabino, [<a href="https://drive.google.com/file/d/1IWbT22Q3yr5lrp4r5R1aLREk5gDN7Xbr/view?usp=sharing">poster</a>] for UROP (2023)</li>
+</ul>
+
+<!--
+  BOOK RECOMMENDATION BOX — needs one setup step.
+  GitHub Pages can't send email on its own, so this posts to Formspree:
+    1. Sign up free at https://formspree.io with olivia@velte.com
+    2. Create a form; you get an endpoint like https://formspree.io/f/abcdwxyz
+    3. Paste it below, replacing YOUR_FORM_ID
+    4. Confirm the verification email
+-->
+<div class="dropbox">
+  <h2>Drop a book recommendation</h2>
+
+  <form id="book-form" novalidate>
+    <label class="hp" for="website">Leave this field empty</label>
+    <input class="hp" type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+
+    <label class="hp" for="book">Your book recommendation</label>
+    <textarea id="book" name="recommendation" placeholder="It's anonymous!" required></textarea>
+
+    <button type="submit" id="book-submit">Send</button>
+    <p class="status" id="book-status" role="status" aria-live="polite"></p>
+  </form>
+</div>
+
+<script>
+  const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+  const form = document.getElementById("book-form");
+  const field = document.getElementById("book");
+  const button = document.getElementById("book-submit");
+  const status = document.getElementById("book-status");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const text = field.value.trim();
+    if (!text) {
+      status.textContent = "Add a book first.";
+      field.focus();
+      return;
+    }
+
+    // Honeypot tripped — pretend it worked, send nothing.
+    if (form.elements["_gotcha"].value) {
+      form.innerHTML = '<p class="status">Sent! Thank you :)</p>';
+      return;
+    }
+
+    button.disabled = true;
+    button.textContent = "Sending";
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+          recommendation: text,
+          _subject: "Anonymous book recommendation"
+        })
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      form.innerHTML = '<p class="status">Sent! Thank you :)</p>';
+    } catch (error) {
+      button.disabled = false;
+      button.textContent = "Send";
+      status.textContent = "That didn't send. Try again in a moment.";
+    }
+  });
+</script>
+
+</body>
+</html>
